@@ -1,4 +1,16 @@
-body {
-    background-color: bisque;
+h1 {
+    color: red;
 }
-/* comment */
+
+
+
+/*
+multi
+line
+comment
+*/
+
+.fancy-header {
+    color: purple; /* single line comment */
+    text-decoration: underline;
+}
