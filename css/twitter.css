@@ -7,6 +7,7 @@
 }
 * {
     box-sizing: border-box;
+
 }
 body, html {
     background-color: var(--main-bg);
@@ -29,26 +30,33 @@ a {
     color: var(--link-color);
 }
 
-media {
+.media {
     width: 100%;
-    background-color: #fff;
+    background-color: var(--light-bg);
+    border-bottom: 1px solid var(--separator-color);
+    padding: 0.5em;
+    overflow: auto;
+}
+.media-image {
+    width: 50px;
+    margin-top: 1.33em;
+}
 
+.media-body{
+    float: left;
+    width: calc(100% - 50px);
 }
 
 .container {
-    margin: 10px;
+    margin: 2em;
+    padding: 2em;
+    width: 100%;
 }
 
 .nav {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    display: inline-block;
-    position: fixed;
-    top: 0;
-    background-color: #FFFFFF;
-    width: 100%;
-
 }
 
 .nav-link {
@@ -60,21 +68,23 @@ media {
 .nav-item {
     padding: 1.5em;
     display:inline-block;
-
 }
 
 .top-nav {
     position: fixed;
     width: 100%;
-
-
+    z-index: 1000;
+    top: 0;
+    height: 66px;
+    background-color: #FFF;
 }
 
 .nav-link:hover {
     color: var(--link-color);
 }
 .profile {
-    background: var(--light-bg);
+    height: 80px;
+    background-color: var(--light-bg);
 }
 .btn {
     border: 1px solid var(--main-link-color);
@@ -102,6 +112,7 @@ media {
 
 .profile {
     height: 80px;
+    background: var(--light-bg);
 }
 
 .profile-form {
@@ -111,34 +122,29 @@ media {
 
 .profile-image {
     position: absolute;
-    top: 250px;
-    z-index: 1000;
+    top: 300px;
 }
 
 .profile-details {
-    width: calc(25% - .5em);
-    margin: 0 .5em 0 .5em;
+    width: calc(25% - 1em);
+    margin: 0 .5em;
     float: left;
-    padding: 20px;
 }
 
 .timeline {
-    width: calc(50% - .5em);
-    margin: 0 .5em 0 .5em;
+    width: calc(50% - 1em);
+    margin: 0 .5em;
     float: left;
     background-color: #FFFFFF;
-    padding: 20px;
-
 }
 
 .who-to-follow{
-    width: calc (25% - .5em);
-    margin: 0 .5em 0 .5em;
-    float: right;
+    width: calc(25% - 1em);
+    margin: 0 .5em;
+    float: left;
     background-color: #FFFFFF;
-    padding: 20px;
 }
 
-ul {
+.profile-items{
     list-style-type: none;
 }
