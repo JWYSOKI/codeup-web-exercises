@@ -1,0 +1,23 @@
+
+.alert-info {
+    background-color: #ddfaff;
+    border: 1px solid gray;
+    text-align: center;
+    padding: 2em;
+    margin: 0 auto;
+}
+
+.nav-links {
+    background-color: lightgrey;
+
+}
+
+li {
+    list-style-type: none;
+    padding: 5px;
+    border: 10px solid white;
+    text-align: center;
+
+}
+
+@media screen and (max-width:)
