@@ -40,3 +40,11 @@
 .one-eighth {
     width: 12.5%;
 }
+
+@media screen and (min-width: 768px) {
+    .one-half {width: 50%;}
+    .one-third {width: 33.3333%;}
+    .one-fourth {width: 25%;}
+    .one-eighth {width: 16%;}
+}
+
