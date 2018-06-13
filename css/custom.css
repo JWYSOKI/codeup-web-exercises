@@ -1,0 +1,14 @@
+.jumbotron {
+    background-image: url("../img/images/pizza.png");
+    background-size:cover;
+}
+
+.jumbo-center {
+    text-align: center;
+}
+.d-sm-none .d-md-block;
+
+#choose {
+    background-color: #007aff;
+}
+
