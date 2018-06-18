@@ -77,7 +77,7 @@
  */
 var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 var randomColor = colors[Math.floor(Math.random() * colors.length)];
-
+kout
 function analyzeColor(color) {
 
     if (color === "red") {
