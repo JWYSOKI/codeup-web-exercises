@@ -1,44 +1,48 @@
-// // (function() {
+// (function() {
 //     "use strict";
-//
-//     /**
-//      * TODO:
-//      * Create an object with firstName and lastName properties that are strings
-//      * with your first and last name. Store this object in a variable named
-//      * `person`.
-//      *
-//      * Example:
-//      *  > console.log(person.firstName) // "Rick"
-//      *  > console.log(person.lastName) // "Sanchez"
-//      */
-//
-//
-//     var person = {
-//         firstName: "Jillian",
-//         lastName: "Wysoki"
-//     };
-//         console.log(person.firstName);
-//
-//
-//
-//
-//     /**
-//      * TODO:
-//      * Add a sayHello method to the person object that returns a greeting using
-//      * the firstName and lastName properties.
-//      * console.log the returned message to check your work
-//      *
-//      * Example
-//      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
-//      */
-//
-//         person.sayHello = function () {
-//
-//             return "Hello from " + this.firstName + " " + this.lastName
-//         };
-//
-//
-//     console.log(person.sayHello());
+
+    /**
+     * TODO:
+     * Create an object with firstName and lastName properties that are strings
+     * with your first and last name. Store this object in a variable named
+     * `person`.
+     *
+     * Example:
+     *  > console.log(person.firstName) // "Rick"
+     *  > console.log(person.lastName) // "Sanchez"
+     */
+
+
+    var person = {
+        firstName: "Jillian",
+        lastName: "Wysoki",
+        sayHello: function(){
+            var message = "Hello from " + this.firstName + " " + this.lastName + "!";
+            return message;
+        }
+    };
+        console.log(person.sayHello());
+
+
+
+
+    /**
+     * TODO:
+     * Add a sayHello method to the person object that returns a greeting using
+     * the firstName and lastName properties.
+     * console.log the returned message to check your work
+     *
+     * Example
+     * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
+     */
+
+        person.sayHello = function () {
+
+            return "Hello from " + this.firstName + " " + this.lastName
+        };
+
+
+    console.log(person.sayHello()); // Desired output is "Hello from Jillian Wysoki"
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -62,7 +66,7 @@
 
     shoppers.forEach( function (discount) {
         if (discount.amount > 200) {
-            console.log(discount.name + 'spent $' + '. ' + discount.name + ' gets a 12% discount, which is $' + (discount.amount * .12).toFixed(2) + '. Making the total' + (discount.amount - (discount.amount * .12)).toFixed(2) + '.')
+            console.log(discount.name + 'spent $' + '. ' + discount.name + ' gets a 12% discount, which is $' + (discount.amount * .12).toFixed(2) + '. Making the total $ ' + (discount.amount - (discount.amount * .12)).toFixed(2) + '.')
 
         } else {
             console.log(discount.name + 'spent' + discount.amount + '. That doesn\'t qualify for the discount.')
@@ -73,27 +77,35 @@
 
 
 
-// var shoppers = [
-//     {name: 'Cameron', amount: 180},
-//     {name: 'Ryan', amount: 250},
-//     {name: 'George', amount: 320}
-// ];
-//
-// shoppers.forEach(function (discount) {
-//     if (discount.amount > 200) {
-//         console.log(discount.name + ' spent $' + discount.amount + '. ' + discount.name + ' gets a 12% discount which is $' + (discount.amount * .12).toFixed(2) + '. Making the total ' + (discount.amount - (discount.amount * .12)).toFixed(2) + '.')
-//     }
-//     else {
-//         console.log(discount.name + ' spent ' + discount.amount + '. That doesn\'t qualify for the discount.')
-//     }
-// });
-//
+var shoppers = [
+    {name: 'Cameron', amount: 180},
+    {name: 'Ryan', amount: 250},
+    {name: 'George', amount: 320}
+];
+
+shoppers.forEach(function (discount) {
+    var discount = 0;
+    if (discount.amount > 200) {
+        // Which shoppers get a discount?
+        // console.log("Gets a discount.")
+            var discount = .12;
+
+
+    //name, amount, discount if any, discounted amount
+
+        console.log(discount.name + ' spent $' + discount.amount + '. ' + discount.name + ' gets a 12% discount which is $' + (discount.amount * .12).toFixed(2) + '. Making the total ' + (discount.amount - (discount.amount * .12)).toFixed(2) + '.')
+    }
+    else {
+        console.log(discount.name + ' spent ' + discount.amount + '. That doesn\'t qualify for the discount.')
+    }
+});
+
 
             //     discount = shopper.amount * .12
-            // }
+            //
             //
             // console.log(shopper.name + " had the total of " + shopper.amount + " and the discount was " + discount + " making the new total " + (shopper.amount - discount))
-        });
+        // });
 
 
 
@@ -113,11 +125,7 @@
 
     var books = [
 
-        {
-            title: "The Outsider",
-            author:{
-                firstName: "Stephen", lastname:"King"}
-        },
+        {title: "The Outsider", author:{firstName: "Stephen", lastname:"King"}},
 
         {
             title: "Calypso",
@@ -126,21 +134,21 @@
         },
 
         {
-            title: "The President ",
+            title: "The President Is Missing",
             author:{
-                firstName: "first name3", lastname:"lastName3"}
+                firstName: "Bill", lastname:"Clinton"}
         },
 
         {
-            title: "title4",
+            title: "Oh, the Places You'll Go!",
             author:{
-                firstName: "first name4", lastname:"lastName4"}
+                firstName: "Dr.", lastname:"Suess"}
         },
 
         {
-            title: "title5",
+            title: "Milk and honey",
             author:{
-                firstName: "first name5", lastname:"lastName5"}
+                firstName: "Rupi", lastname:"Kaur"}
         }
 
     ];
@@ -171,9 +179,10 @@
 
  books.forEach(
      function(book) {
-         console.log("This is book # " + (books.indexOf(book) + 1));
+         console.log("Book # " + (books.indexOf(book) + 1));
          console.log("Title: " + book.title);
          console.log("Author: " + book.author.firstName + " " + book.author.lastname);
+         console.log("---");
      }
  )
 
@@ -199,6 +208,6 @@
         // return {number, title, author}
     }
 
-console.log(createBook("Anything", "Author Name"));
+console.log(createBook("Wonder", "R.J.Palacio"));
 
 // })();
