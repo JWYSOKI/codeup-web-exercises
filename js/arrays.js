@@ -76,7 +76,7 @@ console.log(firstInitial);
 console.log(lastLetter);
 
 // I am going to be FREAKING AWESOME at naming things, organizing code, and keeping code tidy! //
-
+//
 
 // Things to notice that are different about arrays:
 // 1) braces []
@@ -122,4 +122,22 @@ console.log(lastLetter);
 //     console.log(greeting);
 // });
 //
+
+
+var daysOfTheWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday'];
+
+console.log(daysOfTheWeek);
+// ['Monday', 'Tuesday', 'Wednesday', 'Thursday']
+
+// // let's add 'Sunday' to the beginning of the week
+// daysOfTheWeek.unshift('Sunday');
+//
+// console.log(daysOfTheWeek);
+// // ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday']
+//
+// // let's add 'Friday' and 'Saturday' to the end of the week
+// daysOfTheWeek.push('Friday', 'Saturday');
+//
+// console.log(daysOfTheWeek);
+// // ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 

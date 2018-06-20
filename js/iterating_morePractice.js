@@ -44,6 +44,7 @@
     }
 
 
+
 //     /**
 //      * TODO:
 //      * Refactor your above code to use a `forEach` loop
@@ -51,11 +52,14 @@
 //
     names.forEach(
         function (name) {
-            console.log(name)
-        });
+            console.log(name);
+        }
+    )
 
-
-
+    // This is what a .forEach looks like as a for loop //
+    // for(var i = 0; i < names.length -1; i++){
+    //     console.log(names[i]);
+    // }
     /**
      * TODO:
      * Create the following three functions, each will accept an array and

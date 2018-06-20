@@ -151,8 +151,8 @@
     // 3) Make a function called addThree() which takes in a number input and returns the number plus 3.
     // ---Test this function with console.log(addThree(5))
 
-    function addThree(shit) {
-        return (shit + 3);
+    function addThree(anything) {
+        return (anything + 3);
     }
         console.log(addThree(5));
 
