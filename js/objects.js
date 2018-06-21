@@ -77,35 +77,35 @@
 
 
 
-// var shoppers = [
-//     {name: 'Cameron', amount: 180},
-//     {name: 'Ryan', amount: 250},
-//     {name: 'George', amount: 320}
-// ];
-//
-// shoppers.forEach(function (discount) {
-//     var discount = 0;
-//     if (discount.amount > 200) {
-//         // Which shoppers get a discount?
-//         // console.log("Gets a discount.")
-//             var discount = .12;
-//
-//
-//     //name, amount, discount if any, discounted amount
-//
-//         console.log(discount.name + ' spent $' + discount.amount + '. ' + discount.name + ' gets a 12% discount which is $' + (discount.amount * .12).toFixed(2) + '. Making the total ' + (discount.amount - (discount.amount * .12)).toFixed(2) + '.')
-//     }
-//     else {
-//         console.log(discount.name + ' spent ' + discount.amount + '.' + 'That does not qualify for the discount.')
-//     }
-// });
+var shoppers = [
+    {name: 'Cameron', amount: 180},
+    {name: 'Ryan', amount: 250},
+    {name: 'George', amount: 320}
+];
+
+shoppers.forEach(function (discount) {
+    var discount = 0;
+    if (discount.amount > 200) {
+        // Which shoppers get a discount?
+        // console.log("Gets a discount.")
+            var discount = .12;
 
 
-            //     discount = shopper.amount * .12
-            //
-            //
-            // console.log(shopper.name + " had the total of " + shopper.amount + " and the discount was " + discount + " making the new total " + (shopper.amount - discount))
-        // });
+    //name, amount, discount if any, discounted amount
+
+        console.log(discount.name + ' spent $' + discount.amount + '. ' + discount.name + ' gets a 12% discount which is $' + (discount.amount * .12).toFixed(2) + '. Making the total ' + (discount.amount - (discount.amount * .12)).toFixed(2) + '.')
+    }
+    else {
+        console.log(discount.name + ' spent ' + discount.amount + '.' + 'That does not qualify for the discount.')
+    }
+});
+
+
+                discount = shopper.amount * .12
+
+
+            console.log(shopper.name + " had the total of " + shopper.amount + " and the discount was " + discount + " making the new total " + (shopper.amount - discount))
+        });
 
 
 
@@ -178,13 +178,19 @@
      */
 
  books.forEach(
-     function(book) {
-         console.log("Book # " + (books.indexOf(book) + 1));
-         console.log("Title: " + book.title);
-         console.log("Author: " + book.author.firstName + " " + book.author.lastname);
-         console.log("---");
-     }
- )
+     function(book, i) {
+     //     console.log("Book # " + (books.indexOf(book) + 1));
+     //     console.log("Title: " + book.title);
+     //     console.log("Author: " + book.author.firstName + " " + book.author.lastname);
+     //     console.log("---");
+
+         //////// DANIEL'S SOLUTION /////////
+
+    console.log("Book # " + (i + 1));
+    console.log("Title: " + books[i].title);
+    console.log("Author: " + books[i].author.firstName + " " + books[i].author.lastname);
+    console.log("---");
+});
 
 
     /**
