@@ -66,10 +66,10 @@
 
     shoppers.forEach( function (discount) {
         if (discount.amount > 200) {
-            console.log(discount.name + 'spent $' + '. ' + discount.name + ' gets a 12% discount, which is $' + (discount.amount * .12).toFixed(2) + '. Making the total $ ' + (discount.amount - (discount.amount * .12)).toFixed(2) + '.')
+            console.log(discount.name + ' spent $' + discount.amount.toFixed(2) + ".  " + discount.name + ' gets a 12% discount, which is $' + (discount.amount * .12).toFixed(2) + '. Making the new total $ ' + (discount.amount - (discount.amount * .12)).toFixed(2) + '.')
 
         } else {
-            console.log(discount.name + 'spent' + discount.amount + '. That doesn\'t qualify for the discount.')
+            console.log(discount.name + ' spent $' + discount.amount + '. That doesn\'t qualify for the discount.')
         }
 
     });
@@ -77,28 +77,28 @@
 
 
 
-var shoppers = [
-    {name: 'Cameron', amount: 180},
-    {name: 'Ryan', amount: 250},
-    {name: 'George', amount: 320}
-];
-
-shoppers.forEach(function (discount) {
-    var discount = 0;
-    if (discount.amount > 200) {
-        // Which shoppers get a discount?
-        // console.log("Gets a discount.")
-            var discount = .12;
-
-
-    //name, amount, discount if any, discounted amount
-
-        console.log(discount.name + ' spent $' + discount.amount + '. ' + discount.name + ' gets a 12% discount which is $' + (discount.amount * .12).toFixed(2) + '. Making the total ' + (discount.amount - (discount.amount * .12)).toFixed(2) + '.')
-    }
-    else {
-        console.log(discount.name + ' spent ' + discount.amount + '. That doesn\'t qualify for the discount.')
-    }
-});
+// var shoppers = [
+//     {name: 'Cameron', amount: 180},
+//     {name: 'Ryan', amount: 250},
+//     {name: 'George', amount: 320}
+// ];
+//
+// shoppers.forEach(function (discount) {
+//     var discount = 0;
+//     if (discount.amount > 200) {
+//         // Which shoppers get a discount?
+//         // console.log("Gets a discount.")
+//             var discount = .12;
+//
+//
+//     //name, amount, discount if any, discounted amount
+//
+//         console.log(discount.name + ' spent $' + discount.amount + '. ' + discount.name + ' gets a 12% discount which is $' + (discount.amount * .12).toFixed(2) + '. Making the total ' + (discount.amount - (discount.amount * .12)).toFixed(2) + '.')
+//     }
+//     else {
+//         console.log(discount.name + ' spent ' + discount.amount + '.' + 'That does not qualify for the discount.')
+//     }
+// });
 
 
             //     discount = shopper.amount * .12
