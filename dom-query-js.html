@@ -30,8 +30,9 @@
         "use strict";
         // TODO: Uncomment next line and get the main header element by id
         var mainHeader = document.getElementById("main-header");
+        console.log(mainHeader);
 
-        //This solution was find by using the JavaScript console, then inspector tool (arrow in a box), hovering over Main Header, clicking on the colored/highlighted area, and using the 'id=' //
+        //This solution is to find the name by using the JavaScript console, then inspector tool (arrow in a box), hovering over Main Header, clicking on the colored/highlighted area, and using the 'id=' //
 
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
@@ -50,21 +51,29 @@
         // TODO: Uncomment the next line and get all list items
         var listItems = document.getElementsByTagName('li');
 
+
+        // the return of getElements (with the plural) is called a NOTE LIST //
+
         // TODO: Set text color on every other list item to grey
         console.log(listItems);
 
 
         for (var i = 0; i < listItems.length; i+=2) {
-           listItems[i].style.color = "grey";
+           // listItems[i].style.color = "grey";
+
+           // when adding checks, go from most specific to least specific //
+
+            //
         }
-
-
 
         // TODO: Set text color of li with dbid = 1 to blue
 
         for (var i = 0; i < listItems.length; i++) {
-            if(listItems[i].getAttribute("data-dbid")==1){
+            if(listItems[i].getAttribute("data-dbid")=== "1"){
                 listItems[i].style.color = "blue";
+            } else if(i % 2 !== 0) {
+// *** FOR CHRIS: REVIEW the ! //
+                listItems[i].style.color = "grey"
             }
         }
 
@@ -75,8 +84,11 @@
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
 
-        subHeader.innerHTML = 'Mission Accomplished!'
+        subHeader[0].innerHTML = 'Mission Accomplished!'
+
+// *** FOR CHRIS:  the [0] must be used here because even though there is only 1, IT IS A COLLECTION ///
     })();
+
 </script>
 </body>
 </html>
