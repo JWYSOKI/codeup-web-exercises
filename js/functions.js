@@ -152,6 +152,7 @@
     // ---Test this function with console.log(addThree(5))
 
     function addThree(anything) {
+
         return (anything + 3);
     }
         console.log(addThree(5));

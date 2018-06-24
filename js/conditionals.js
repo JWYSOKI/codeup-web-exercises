@@ -1,6 +1,5 @@
 "use strict";
 
-
 /**
  * TODO:
  * Write some JavaScript that uses a `confirm` dialog to ask the user if they
@@ -15,36 +14,35 @@
  * do *not* display any of the above information.
  *
  * Can you refactor your code to use functions?
- */
 
-// var enterANumber = confirm("User, would you like to enter a number?");
-// //
-// // console.log(enterANumber);
-//
-// if (enterANumber) {
-//     var userNum = prompt("Enter a number");
-//
-//     if (!isNaN(userNum) && userNum !== true && userNum !== false) {
-//         if (userNum % 2 === 0) {
-//
-//             alert("NUmber is even");
-//         // } else
-//         // }
-//
-//
-//
-//
-//         alert("Number!");
-//     } else {
-//         alert("Input was not a valid number");
-//     }
-//
-//
-// }
-//
-// console.log(enterANumber);
+
 
 /* ########################################################################## */
+
+function checkNumber () {
+    var confirmed = confirm ("User, would you like to enter a number?");
+
+    if (confirmed) {
+        var prompted = prompt ("Great! Please enter a number here.")
+    } else return
+
+    if (isNaN(prompted)){
+        alert ("This is not a number");
+        return
+    }
+
+    if (prompted % 2 === 0){
+        alert ("This number is even")
+    } else alert("This number is odd");
+
+    alert (parseInt(prompted) + 100);
+
+    if (prompted >= 0){
+        alert ("This number is postive")
+    }else alert ("This number is negative")
+}
+// checkNumber()
+
 
 /**
  * TODO:
@@ -64,134 +62,152 @@
  * console.logging the function's return value
  */
 
-
 // Don't change the next two lines!
 // These lines create two variables for you:
 // - `colors`: a list of the colors of the rainbow
 // - `randomColor`: contains a single random color value from the list (this
 //                  will contain a different color everytime the page loads)
+var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+var randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+
+function analyzeColor(color) {
+    switch(color) {
+        case "red":
+            return "Strawberries are red";
+                break;
+        case "orange":
+            return "Orange sentence";
+                break;
+        case "yellow":
+            return "Yellow sentence";
+                 break;
+        case "green":
+            return "Green sentence";
+                break;
+
+        case "blue":
+            return "Blue sentence";
+                break;
+
+        case "indigo":
+            return "Indigo sentence";
+                break;
+
+        case "violet":
+            return "Violet sentence";
+                break;
+        default:
+            return "That color, " + color + " is not a defined color."
+                break;
+    }
+}
+
+// console.log(analyzeColor(randomColor));
+
+
 /**
  * TODO:
  * Pass the `randomColor` variable to your function and console.log the results.
  * You should see a different message everytime you refresh the page
  */
-var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-var randomColor = colors[Math.floor(Math.random() * colors.length)];
-kout
-function analyzeColor(color) {
-
-    if (color === "red") {
-        return "Wild Red.";
+//DONE AND DONE
+/**
+ * TODO:
+ * Refactor your above function to use a switch-case statement
+ */
 
 
-    } else if (color === "orange") {
-        return "Orange is the New Black";
+/**
+ * TODO:
+ * Prompt the user for a color when the page loads, and pass the input from the
+ * user to your `analyzeColor` function. Alert the return value from your
+ * function to show it to the user.
+ */
 
 
-    } else if (color === "yellow") {
-        return "Mellow yellow.";
+// var promptColor = prompt ("User, give me a color")
+//  alert (analyzeColor(promptColor));
 
 
-    } else if (color === "green") {
-        return  color + "Go green!";
 
 
-    } else if (color === "blue") {
-        return color +  "Why so blue?";
+
+/* ########################################################################## */
+
+/**
+ * TODO:
+ * Suppose there's a promotion in Walmart, each customer is given a randomly
+ * generated "lucky number" between 0 and 5. If your lucky number is 0 you have
+ * no discount, if your lucky number is 1 you'll get a 10% discount, if it's 2,
+ * the discount is 25%, if it's 3, 35%, if it's 4, 50%, and if it's 5 you'll get
+ * all for free!.
+ *
+ * Write a function named `calculateTotal` that accepts a lucky number and total
+ * amount, and returns the discounted price.
+ *
+ * Example:
+ * calculateTotal(0, 100) // returns 100
+ * calculateTotal(4, 100) // returns 50
+ * calculateTotal(5, 100) // returns 0
+ *
+ * Test your function by passing it various values and checking for the expected
+ * return value.
+ */
 
 
-    } else if (color === "indigo") {
-        return  color + "Indigo Girl";
+function calculateTotal(lucky, total) {
+    var discount
 
 
-    } else if (color=== "violet") {
-        return color + "Violets are blue";
+    switch (lucky){
+        case 0:
+            discount = 0;
+            break;
 
+        case 1:
+            discount = total * .10;
+            break;
 
-    } else {
-        return "Not a defined color";
+        case 2:
+            discount = total * .25;
+            break;
+
+        case 3:
+            discount = total * .35;
+            break;
+
+        case 4:
+            discount = total * .5;
+            break;
+
+        case 5:
+            discount = total;
+            break;
+
+        default:
+            discount = 0;
+            break;
     }
 
+ return  total - discount
 }
-//
-console.log(analyzeColor("red"));
-console.log(analyzeColor("yellow"));
-analyzeColor("")
 
 
-// // analyzeColor(randomColor);
-// // console.log(randomColor);
-//
-// function analyzeColor(color){
-//
-//     var result;
-//
-//     switch (color) {
-//         case "blue":
-//             result = color + "is the color of the sky";
-//             break;
-//         case "blue":
-//             result = color + "is the color of the sky";
-//             break;
-//         case "blue":
-//             result = color + "is the color of the sky";
-//             break;
-//         default:
-//             result = color + "not a valid color";
-//     }
-// }
-//
-//
-// /**
-//  * TODO:
-//  * Refactor your above function to use a switch-case statement
-//  */
-//
-// /**
-//  * TODO:
-//  * Prompt the user for a color when the page loads, and pass the input from the
-//  * user to your `analyzeColor` function. Alert the return value from your
-//  * function to show it to the user.
-//  */
-//
-// /* ########################################################################## */
-//
-// /**
-//  * TODO:
-//  * Suppose there's a promotion in Walmart, each customer is given a randomly
-//  * generated "lucky number" between 0 and 5. If your lucky number is 0 you have
-//  * no discount, if your lucky number is 1 you'll get a 10% discount, if it's 2,
-//  * the discount is 25%, if it's 3, 35%, if it's 4, 50%, and if it's 5 you'll get
-//  * all for free!.
-//  *
-//  * Write a function named `calculateTotal` that accepts a lucky number and total
-//  * amount, and returns the discounted price.
-//  *
-//  * Example:
-//  * calculateTotal(0, 100) // returns 100
-//  * calculateTotal(4, 100) // returns 50
-//  * calculateTotal(5, 100) // returns 0
-//  *
-//  * Test your function by passing it various values and checking for the expected
-//  * return value.
-//  */
-//
-// function calculateTotal(luckyNumber, total){
-//     var discountedPrice = 0;
-//
-//     return discountedPrice;
-// }
-//
-//
-//
-// /**
-//  * TODO:
-//  * Uncomment the line below to generate a random number between 0 and 6.
-//  * Prompt the user for their total bill, then use your `calculateTotal` function
-//  * and alerts to display to the user what their lucky number was, what their
-//  * price before the discount was, and what their price after the discount is.
-//  */
-// // Generate a random number between 0 and 6
+
+
+
+/**
+ * TODO:
+ * Uncomment the line below to generate a random number between 0 and 6.
+ * Prompt the user for their total bill, then use your `calculateTotal` function
+ * and alerts to display to the user what their lucky number was, what their
+ * price before the discount was, and what their price after the discount is.
+ */
+// Generate a random number between 0 and 6
 // var luckyNumber = Math.floor(Math.random() * 6);
-// console.log(calculateTotal(luckyNumber, 100));
-// console.log(calculateTotal(luckyNumber, 200));
+
+
+var luckyNumber = Math.floor(Math.random() * 6);
+
+console.log(calculateTotal(luckyNumber, 200));
