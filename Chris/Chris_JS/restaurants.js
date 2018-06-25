@@ -30,7 +30,7 @@ restaurants.forEach(
     function(restaurant) {
         // console.log(restaurant);
 
-console.log (this.restaurant + " is a Tex-Mex restaurant in " + this.city + this.state + " and I would give " + restaurant + " a " + this.stars + " stars.")
+console.log (restaurant.name + " is a Tex-Mex restaurant in " + restaurant.city + restaurant.state + " and I would give " + restaurant.name + " a " + restaurant.stars + " stars.")
 
 });
 

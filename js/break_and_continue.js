@@ -1,29 +1,16 @@
 
-// =========== Break and Continue Exercise
-
-// Break and Continue
-//
-// Create a file named break_and_continue.js in the js directory.
 //     Prompt the user for an odd number between 1 and 50. Use a loop and a break statement to continue prompting the user if they enter invalid input.
 //     Use a loop and the continue statement to output all the odd numbers between 1 and 50, except for the number the user entered.
-//     Your output should look like this:
 
-var oddNumber prompt ("User, please enter an odd number between 1 and 50.");
+var oddNum = prompt(:"User, please enter an odd number between 1 and 50.")
 
-do {
-    //First thing to do is GET THE PROMPT
 
-    if (s){
-        console.log("I cannot sell you " + sold + " because I only have " + amountOfConesToSell + " left." )
-        break;
-    }
-    console.log(sold + " cones sold")
-    amountOfConesToSell -= sold;
+for (i = ) //This loop is to repeat through the number
 
-} while (amountOfConesToSell > 0)
-console.log("Yay! I sold them all!")
-}
-iceCream()
+    if ()
+        else if ()
+
+
 
 
 // Number to skip is: 27
@@ -53,28 +40,3 @@ iceCream()
 // Here is an odd number: 45
 // Here is an odd number: 47
 // Here is an odd number: 49
-
-// while (true) {
-//     var userNum = prompt("Enter an odd number between 1 and 50");
-//
-//     if (userNum % 2 !== 0 && userNum <= 50 && userNum >=1){
-//         break;
-//     }
-// }
-
-// NEXT STEP IN THIS SOLUTION //
-//
-// console.log("Number to skip is:" + userNum);
-//
-// for (var i = 1; i <= 50; i +=1){
-//     if (i % 2 == 0) {
-//         continue;
-//     }
-//
-//     if (i !== parseInt(userNum){
-//         console.log("Here is an odd number: " + i);
-//
-//     } else {
-//         console.log("Yikes! Skipping number: " + userNum);
-//     }
-// }
