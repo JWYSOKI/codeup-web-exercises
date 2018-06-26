@@ -18,10 +18,6 @@
 <h4>I love working ahead!</h4>
 
 
-
-
-
-
 <!-- Load the Google Maps API [DON'T FORGET TO USE A KEY] -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxIPbNd4ljI6NdSyP5ugk4XoKDzw2VEZM"></script>
 
@@ -30,20 +26,35 @@
     function showMap (address) {
         "use strict";
 
-        //On this step: I am instantiating(which means to represent by an instance)the geocoder object
+
+// === On this step: I am defining the map
+
+        // var map = new google.maps.Map(mapCanvas, mapOptions);
+
+
+
+// === On this step: I am instantiating(which means to represent by an instance)the "geocoder" object
+
+
         var geocoder = new google.maps.Geocoder();
 
 
-        //On this step:
+// === On this step:
         geocoder.geocode({ "address": address }, function(results, status) {
 
-            // Check for a successful result
+
+    // console.log(results[0].geometry.location.lat());
+
+
+// Check for a successful result
             if (status == google.maps.GeocoderStatus.OK) {
-                // Recenter the map over the address
+
+// Recenter the map over the address
                 map.setCenter(results[0].geometry.location);
             } else {
 
-                // Show an error message with the status if our request fails
+// Show an error message with the status if our request fails
+
                 alert("Geocoding was not successful - STATUS: " + status);
             }
         });
@@ -56,22 +67,19 @@
 
             mapTypeId: google.maps.MapTypeId.SATELLITE
 
-            // This sets the center of the map at our location. I commented it out because it is now specified in the assigned var of 'address'
+// === This sets the center of the map at our location. I commented it out because it is now specified in the assigned var of 'address'
 
             // center: {
             //     lat:  29.426791,
             //     lng: -98.489602
             // }
-
-
         };
 
-        // Render the map
+// Render the map
         var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 
 
-
-        //In this step: latitude and longitudes were searched and hard-coded
+// === In this step: latitude and longitudes were searched and hard-coded
 
         var andalusia = { lat: 29.432820, lng: -98.490060 };
 
@@ -81,17 +89,24 @@
             map: map
         });
 
-        // Create a new infoWindow object with content
+// Create a new infoWindow object with content
         var infowindow = new google.maps.InfoWindow({
-            content: "THE ANDALUSIA: HOME SWEET HOME."
+            content: "THE ANDALUSIA"
         });
 
-// Open the window using our map and marker
+// Open the window using our map and marker. This command describes where we want the window to open and on which marker (in case you have multiple markers)
         infowindow.open(map, marker);
 
+// Creating events in a map
+// Example
+
+    // map.addListener("dragend", function(){
+    //     infowindow.open.(map, marker);
+    //     });
 
     };
 
     showMap("221 Lexington San Antonio")
+
 </script>
 </body>

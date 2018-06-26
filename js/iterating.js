@@ -91,13 +91,13 @@ function secondItem(array) {
 function lastItem(array) {
     console.log((array[array.length -1]));
     }
-    lastItem(names)
+    lastItem(names);
 
-    //This is called method overloading:
-// function lastItem() {
-//
-// }
-// lastItem()
+    This is called method overloading:
+function lastItem() {
+
+}
+lastItem()
 
 
 

@@ -1,47 +1,50 @@
-// 1. Define an array call restaurants that holds 3 restaurant objects. Each object should have the following properties.
+// // 1. Define an array call restaurants that holds 3 restaurant objects. Each object should have the following properties.
+// //
+// // -Name
+// // -City
+// // -State Abbrevation
+// // -Category
+// // -Stars
+// //
+// // *** This is a defined array ***
 //
-// -Name
-// -City
-// -State Abbrevation
-// -Category
-// -Stars
+// var restaurants = [
 //
-// *** This is a defined array ***
+// {name: "Green", city: "San_Antonio", state: "TX", category: "Vegetarian", stars: "5"},
+//
+// {name: "Tierra", city: "San_Antonio", state: "TX", category: "Mexican", stars: "4"},
+//
+// {name: "Paesanos", city: "San_Antonio", state: "TX", category: "Italian", stars: "5"}
+// ];
+//
+// console.log(restaurants);
+//
+//
+// // 2. Write a loop that prints the following statement for each restaurant like the example below to the console log.
+// // "Torchy's is a Tex-Mex restaurant in Austin, TX. I would give Torcyh's a 4 star rating."
+//
+// // for (/*initialization*/; /*condition*/; /*increment*/) {
+// //     // body
+// // }
+//
+// restaurants.forEach(
+//     function(restaurant) {
+//         // console.log(restaurant);
+//
+// console.log (restaurant.name + " is a Tex-Mex restaurant in " + restaurant.city + restaurant.state + " and I would give " + restaurant.name + " a " + restaurant.stars + " stars.")
+//
+// });
+//
+//
+// // 3. Write another loop that prints each restaurant name and city,state with list item tags around it like the example below
+//
+// restaurants.forEach(
+//     function (restaurant) {
+//
+//         console.log("<li>" + restaurant.name + " - "  + this.city + "," + this.state + "</li>")
+//
+// });
 
-var restaurants = [
-
-{name: "Green", city: "San_Antonio", state: "TX", category: "Vegetarian", stars: "5"},
-
-{name: "Tierra", city: "San_Antonio", state: "TX", category: "Mexican", stars: "4"},
-
-{name: "Paesanos", city: "San_Antonio", state: "TX", category: "Italian", stars: "5"}
-];
-
-console.log(restaurants);
-
-
-// 2. Write a loop that prints the following statement for each restaurant like the example below to the console log.
-
-// for (/*initialization*/; /*condition*/; /*increment*/) {
-//     // body
-// }
-
-restaurants.forEach(
-    function(restaurant) {
-        // console.log(restaurant);
-
-console.log (restaurant.name + " is a Tex-Mex restaurant in " + restaurant.city + restaurant.state + " and I would give " + restaurant.name + " a " + restaurant.stars + " stars.")
-
-});
-
-
-
-// "Torchy's is a Tex-Mex restaurant in Austin, TX. I would give Torcyh's a 4 star rating."
-
-
-
-
-// 3. Write another loop that prints each restaurant name and city,state with list item tags around it like the example below
 
 
 // <li>Torchys - Austin, TX</li>
@@ -51,11 +54,14 @@ console.log (restaurant.name + " is a Tex-Mex restaurant in " + restaurant.city 
 
 
 
-// 4. Let's say second first restaurant in your array deserves a different star rating. Write a line of code that changes the current star rating to either one more or one less. Your choice.
+// 4. Let's say second restaurant in your array deserves a different star rating. Write a line of code that changes the current star rating to either one more or one less. Your choice.
 
 
-
-
+//  function() {
+//     for (i = 1; i < this.length; i+1) {
+//         this.stars[i] = ();
+//     }
+// };
 
 
 
@@ -63,6 +69,7 @@ console.log (restaurant.name + " is a Tex-Mex restaurant in " + restaurant.city 
 
 
 // push
+
 
 
 
@@ -90,4 +97,10 @@ console.log (restaurant.name + " is a Tex-Mex restaurant in " + restaurant.city 
 
 
 // GOOD LUCK!
+
+
+
+
+
+
 
