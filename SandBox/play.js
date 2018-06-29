@@ -1,30 +1,13 @@
 "use strict";
 
-// window.onload = function(){
-//
-// document.getElementById("playButton").addEventListener("click", function(){
-//     var input = document.getElementById("playInput").value;
-//
-//     console.log(input);
-//
-//     document.getElementById("playOutput").innerText = input;
-// })
-// };
+document.getElementById("playButton")
+    .addEventListener("click", function(){
 
-$(function(){
-    $("#playButton").click(function(){
-        $("playOutput").text($("#playOutput").val());
-        $("h1").toggle(1000);
 
-    })
+var input = document.getElementById("playInput").value;
+document.getElementById("playOutput").innerText=input;
 
-    $(".importante").on("mouseover", function(){
-        $(this).css("background", "yellow");
+        console.log("Play!");
+        console.log(input);
+});
 
-        // $("p").css({
-        //     background: "yellow"
-        // })
-
-    })
-
-})

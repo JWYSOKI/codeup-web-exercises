@@ -18,9 +18,22 @@
     <li class="codeup">banana</li>
 </ul>
 
+    <input id="playInput"><button id="playButton">Play</button>
+    <div id="playOutput"></div>
+    <p class="importante">Landjaeger doner pork chop corned beef shankle pastrami tri-tip bresaola buffalo ham kielbasa capicola boudin porchetta picanha. Chuck pastrami bacon alcatra, tenderloin turducken burgdoggen pork loin landjaeger chicken pork belly hamburger. </p>
+    <p class="importante">Landjaeger doner pork chop corned beef shankle pastrami tri-tip bresaola buffalo ham kielbasa capicola boudin porchetta picanha. Chuck pastrami bacon alcatra, tenderloin turducken burgdoggen pork loin landjaeger chicken pork belly hamburger. </p>
+    <p class="importante">Landjaeger doner pork chop corned beef shankle pastrami tri-tip bresaola buffalo ham kielbasa capicola boudin porchetta picanha. Chuck pastrami bacon alcatra, tenderloin turducken burgdoggen pork loin landjaeger chicken pork belly hamburger. </p>
+    <p class="importante">Landjaeger doner pork chop corned beef shankle pastrami tri-tip bresaola buffalo ham kielbasa capicola boudin porchetta picanha. Chuck pastrami bacon alcatra, tenderloin turducken burgdoggen pork loin landjaeger chicken pork belly hamburger. </p>
+    <p class="importante">Landjaeger doner pork chop corned beef shankle pastrami tri-tip bresaola buffalo ham kielbasa capicola boudin porchetta picanha. Chuck pastrami bacon alcatra, tenderloin turducken burgdoggen pork loin landjaeger chicken pork belly hamburger. </p>
+
+
+
+
 </div>
 
 <script src="js/jquery-2.2.4.js"></script>
+
+<script src="js/my-custom-javascript.js"></script>
 <script>
 // $("li").css({
 //     fontSize: "20px"
@@ -30,11 +43,15 @@
 //     background: "yellow"
 // })
 
+$(document).ready(function() {
+    alert( 'The DOM has finished loading!' );
+});
+
  // ******* ===== 2nd solution ======= *********** //
 
-$("li").css("font-size", "20 px").css("background", "#F3D4CE");
+$("li").css("font-size", "20 px").css("background", "#F3D4CE")
 $("p").css("background", "#DAB3AB");
-$("h1").css("background", "#9E9191");
+$("h1").css("background", "#AD8468")
 $("body").css("background", "linen");
 
 
@@ -53,6 +70,9 @@ document.getElementById("fancy-header").addEventListener("click", function(event
 $("li").dblclick(function(){
     $(this).css("background", "yellow");
 });
+
+
+
 
 
 </script>

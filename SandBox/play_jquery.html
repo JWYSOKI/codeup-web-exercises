@@ -13,7 +13,24 @@
     <script src="play.js"></script>
 </head>
 <body>
-    <h1>jQuery playtime</h1>
+    <h1 id="main-header">jQuery playtime</h1>
+
+
+ <script>
+
+
+    function f() {
+        "use strict";
+        $('#main-header').click(function () {
+            $('#main-header').css('background', 'pink');
+        });
+    }
+
+    $('p').dblclick(function(){
+        $(this).css('font-size', '18px');
+    })
+
+ </script>
 
     <input id="playInput"><button id="playButton">Play</button>
     <div id="playOutput"></div>
