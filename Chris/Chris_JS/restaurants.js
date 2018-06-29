@@ -8,15 +8,15 @@
 // //
 // // *** This is a defined array ***
 //
-// var restaurants = [
-//
-// {name: "Green", city: "San_Antonio", state: "TX", category: "Vegetarian", stars: "5"},
-//
-// {name: "Tierra", city: "San_Antonio", state: "TX", category: "Mexican", stars: "4"},
-//
-// {name: "Paesanos", city: "San_Antonio", state: "TX", category: "Italian", stars: "5"}
-// ];
-//
+var restaurants = [
+
+{name: "Green", city: "San_Antonio", state: "TX", category: "Vegetarian", stars: "5"},
+
+{name: "Tierra", city: "San_Antonio", state: "TX", category: "Mexican", stars: "4"},
+
+{name: "Paesanos", city: "San_Antonio", state: "TX", category: "Italian", stars: "5"}
+];
+
 // console.log(restaurants);
 //
 //
@@ -27,23 +27,23 @@
 // //     // body
 // // }
 //
-// restaurants.forEach(
-//     function(restaurant) {
-//         // console.log(restaurant);
-//
+restaurants.forEach(
+    function(restaurant) {
+        // console.log(restaurant);
+
 // console.log (restaurant.name + " is a Tex-Mex restaurant in " + restaurant.city + restaurant.state + " and I would give " + restaurant.name + " a " + restaurant.stars + " stars.")
-//
-// });
+
+});
 //
 //
 // // 3. Write another loop that prints each restaurant name and city,state with list item tags around it like the example below
 //
-// restaurants.forEach(
-//     function (restaurant) {
-//
-//         console.log("<li>" + restaurant.name + " - "  + this.city + "," + this.state + "</li>")
-//
-// });
+restaurants.forEach(
+    function (restaurant) {
+
+        // console.log("<li>" + restaurant.name + " - "  + restaurant.city + "," + restaurant.state + "</li>")
+
+});
 
 
 
@@ -57,21 +57,26 @@
 // 4. Let's say second restaurant in your array deserves a different star rating. Write a line of code that changes the current star rating to either one more or one less. Your choice.
 
 
-//  function() {
-//     for (i = 1; i < this.length; i+1) {
-//         this.stars[i] = ();
-//     }
-// };
+var currentRating = restaurants[1].stars
 
 
+restaurants[1].stars = (parseInt(currentRating) + 1).toString()
+//this is called method chaining, when parseInt and .toString are used together//
+
+console.log(restaurants);
+
+
+//SECOND, EASIER SOLUTION
+
+restaurants[1].stars = (p
+(restaurants[1].stars) + 1).toString()
+ console.log(restaurants);
 
 // 5. Add another restaurant object to your array programatically. In other words, don't go back to the original declaration of the restaurants array, write some code to add a new item into the existing array.
 
 
-// push
-
-
-
+restaurants.push({name: "The Palm", city: "San_Antonio", state: "TX", category: "Fine", stars: "5"}) ;
+console.log(restaurants);
 
 
 // ********* BONUS *********
