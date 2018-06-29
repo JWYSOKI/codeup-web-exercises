@@ -7,11 +7,31 @@
 <body>
 
 
+<div class="container">
+
+<h1 id="fancy-header">JQuery Header</h1>
+    <h2>2nd Header</h2>
+<p id="paragraph">JQuery paragraph</p>
+<ul>
+    <li>apples</li>
+    <li>oranges</li>
+    <li>bananas</li>
+</ul>
+
+</div>
+
+
+
+
+
 <script src="js/jquery.js"></script>
 <script>
     $(document).ready(function(){
-        alert("A message")
+        alert("JQuery is cool beans")
     });
+
+   alert($("#fancy-header").text())
+    alert($("#paragraph").text())
 
 </script>
 
