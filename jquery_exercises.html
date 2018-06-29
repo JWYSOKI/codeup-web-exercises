@@ -13,9 +13,9 @@
     <h2>2nd Header</h2>
 <p id="paragraph">JQuery paragraph</p>
 <ul>
-    <li>apples</li>
-    <li>oranges</li>
-    <li>bananas</li>
+    <li id="codeup">apple</li>
+    <li class="codeup">orange</li>
+    <li class="codeup">banana</li>
 </ul>
 
 </div>
@@ -26,12 +26,14 @@
 
 <script src="js/jquery.js"></script>
 <script>
-    $(document).ready(function(){
-        alert("JQuery is cool beans")
-    });
+$(".codeup").css({
+    color: "blue",
+    background: "white",
+    border: "1px solid red",
+    width: "25%"
+})
 
-   alert($("#fancy-header").text())
-    alert($("#paragraph").text())
+
 
 </script>
 
