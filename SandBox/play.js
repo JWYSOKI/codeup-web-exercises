@@ -18,4 +18,13 @@ $(function(){
 
     })
 
+    $(".importante").on("mouseover", function(){
+        $(this).css("background", "yellow");
+
+        // $("p").css({
+        //     background: "yellow"
+        // })
+
+    })
+
 })

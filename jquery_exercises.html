@@ -20,17 +20,39 @@
 
 </div>
 
-<script src="js/jquery.js"></script>
+<script src="js/jquery-2.2.4.js"></script>
 <script>
-$("li").css({
-    fontSize: "20px"
-})
+// $("li").css({
+//     fontSize: "20px"
+// })
+//
+// $("h1, p, li").css({
+//     background: "yellow"
+// })
 
-$("h1, p, li").css({
-    background: "yellow"
-})
+ // ******* ===== 2nd solution ======= *********** //
+
+$("li").css("font-size", "20 px").css("background", "#F3D4CE");
+$("p").css("background", "#DAB3AB");
+$("h1").css("background", "#9E9191");
+$("body").css("background", "linen");
+
+
 
 alert($("h1").text())
+
+document.getElementById("fancy-header").addEventListener("click", function(event) {
+    console.log("Clicked!")
+});
+
+
+
+     $(this).css("background", "pink");
+
+
+$("li").dblclick(function(){
+    $(this).css("background", "yellow");
+});
 
 
 </script>
