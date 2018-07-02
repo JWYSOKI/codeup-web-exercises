@@ -5,47 +5,34 @@
 </head>
 <body>
 <h1>Konami Code</h1>
-<form>
-    <input type="text" id="Konami" placeholder="Input">
-</form>
 
-<script src="js/jquery-2.2.4.js"></script>
+<script src="js/jquery.js"></script>
 <script>
     "use strict";
-    // var konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
-    // var userInput=[];
-    // $(document).keyup(function(event){
-    //     console.log(event.keyCode);
-    // });
-    //    1. Define the win condition
-    //      a. got the correct sequence up until the last one
-    //      b. assume the last one was clicked
-    //    2. define a partial answer bc good, but not done yet
-    //    3. Define the lose condition
-    var konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a', 'Enter'];
-    var i=0;
-    $("body").keydown(function (event) {
-        // if index == last element of array && key pressed equals last element of array
-        if ((i == konamiCode[konamiCode.length-1]) && (event.key == konamiCode[konamiCode.length-1)){
-            alert("yaaaaaayyy! 30 lives!!");
-        } else if(event.key == konamiCode[i]){ //if the key stroke == index of the array
-            i++;
-        } else { //start the counter again at 0
-            i=0;
+
+    var code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
+
+    var count = 0;
+
+
+
+    $(document).keyup(function(event){
+
+        if (count == code.length - 1 && event.keyCode == 13){
+            alert("You have added 30 lives!")
         }
+
+
+        if(event.keyCode == code[count]){
+          count++
+            console.log("That was correct " + count)
+        }
+        else {
+            count = 0;
+            console.log("that was wrong " + count)
+        }
+
     });
-    // $('#Konami').keydown(function (input) {
-    //     for (var i = 0; i < konamiCode.length;i++){
-    //         if (input === konamiCode[i]) {
-    //             userInput.push();
-    //         } else {
-    //             console.log("I'm sorry, that is incorrect. Try again!");
-    //         }
-    //     }
-    //     if (konamiCode.toString() === userInput.toString()){
-    //         console.log("You have added 30 lives!");
-    //     }
-    // });
 </script>
 </body>
 </html>
