@@ -1,41 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>jQuery FAQ Exercise</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
     <style>
         .invisible {
             display:none;
         }
     </style>
-
 </head>
+
 <body>
 
 <h3>FAQs</h3>
 
-
-<dl>
-    <dt>10 FAQs about National Parks</dt>
-    <dd class="invisible">Who is the director of the National Park Service? </dd>
-    <dd class="invisible">How many employees are in the National Park Service?</dd>
-    <dd class="invisible">How old is the National Park System?</dd>
-    <dd class="invisible">What is the origin of the National Park Service arrowhead?</dd>
-    <dd class="invisible">How many areas are in the National Park System?</dd>
-    <dd class="invisible">What is the largest national park site? Smallest?</dd>
-    <dd class="invisible">How many people visit the national parks?</dd>
-    <dd class="invisible">What is the most-visited national park?</dd>
-    <dd class="invisible">What is the National Park Service budget?</dd>
-    <dd class="invisible">How do I obtain a park entrance pass?</dd>
-    <dd>https://www.nps.gov/aboutus/faqs.htm</dd>
-</dl>
+<div class="container my-5">
+    <div class="row">
+       <h1>National Parks</h1>
+    </div>
+    <div class="row">
+        <dl>
+            <dt>10 FAQs about National Parks</dt>
+            <dd class="invisible">Who is the director of the National Park Service? </dd>
+            <dd class="invisible">How many employees are in the National Park Service?</dd>
+            <dd class="invisible">How old is the National Park System?</dd>
+            <dd class="invisible">What is the origin of the National Park Service arrowhead?</dd>
+            <dd class="invisible">How many areas are in the National Park System?</dd>
+            <dd class="invisible">What is the largest national park site? Smallest?</dd>
+            <dd class="invisible">How many people visit the national parks?</dd>
+            <dd class="invisible">What is the most-visited national park?</dd>
+            <dd class="invisible">What is the National Park Service budget?</dd>
+            <dd class="invisible">How do I obtain a park entrance pass?</dd>
+        </dl>
+    </div>
+</div>
 
 <h3>Redwood National Park</h3>
 <ul>
-    <li>Linux</li>
-    <li>Apache</li>
-    <li>MySQL</li>
-    <li>PHP</li>
+    <li>Redwood National and State Parks is in northern California just below the Oregon border.</li>
+    <li>Visitor centers are open from 9 am to 5 pm each day in summer, and 9 am to 4 pm in autumn to spring.</li>
+    <li>There is a $35.00 per night/per site fee to camp.</li>
+    <li>Some redwoods live to 2,000 years.</li>
 </ul>
 
 <h3>Sequoia National Park</h3>
@@ -54,34 +65,48 @@
     <li>PHP</li>
 </ul>
 
+<button type="button" class="btn btn-success btn-lg">Success!</button>
+
 <script src="js/jquery.js"></script>
 
 <script>
     "use strict";
-    $.ajax("https://swapi.co/api/people").done(function(data,status){console.log(data)
-    })
 
-    // $('dd').click(function () {
-    //      $(this).addClass('highlight');
-    //   $(this).next().invisibleClass('invisible');
-    //  });
-//*** Adds an a tag to the page once it loads that says "toggle invisible"
+
+        $.ajax("https://swapi.co/api/people").done(function(data,status){console.log(data)
+    });
+
+
+
+        $(this).addClass('highlight');
+      $(this).next().invisibleClass('invisible');
+     });
+// *** Adds an a tag to the page once it loads that says "toggle invisible"
     $('body').ready().append('<a>Toggle Invisble</a>')
-//*** This immediately adds a click listener to that link
-        .click(function(){$('dd').
-//*** When the link is clicked the invisible class is toggled on and off of the dd links
-        toggleClass('invisible');
+// *** This immediately adds a click listener to that link
+        .click(function(){$('dd')
+        toggleClass('invisible');//*** When the link is clicked the invisible class is toggled on and off of the dd links
+
         });
 
-//*** Highlight every other li element using the .each() method:
+// *** Highlight every other li element using the .each() method:
     $('li').each(function(index) {
-        if (index % 2 !== 0) {
+        if (index % 4 !== 0) {
             $(this).css('background-color', '#FF0');
         }
     });
 </script>
 
+<footer>https://www.nps.gov/redw/faqs.htm</footer>
+<footer>https://www.nps.gov/seki/index.htm</footer>
+<footer>https://www.nps.gov/aboutus/faqs.htm</footer>
 
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
 
