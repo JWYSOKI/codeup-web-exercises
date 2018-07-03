@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>jQuery FAQ Exercise</title>
+    <style>
+        .invisible {
+            display:none;
+        }
+    </style>
+
 </head>
 
 
@@ -10,17 +16,17 @@
 <body>
 <dl>
     <dt>10 FAQs about National Parks</dt>
-    <dd>Who is the director of the National Park Service? </dd>
-    <dd>How many employees are in the National Park Service?</dd>
-    <dd>How old is the National Park System?</dd>
-    <dd>What is the origin of the National Park Service arrowhead?</dd>
-    <dd>How many areas are in the National Park System?</dd>
-    <dd>What is the largest national park site? Smallest?</dd>
-    <dd>How many people visit the national parks?</dd>
-    <dd>What is the most-visited national park?</dd>
-    <dd>What is the National Park Service budget?</dd>
-    <dd>How do I obtain a park entrance pass?</dd>
-    <dd>https://www.nps.gov/aboutus/faqs.htm</dd>
+    <dd class="invisible">Who is the director of the National Park Service? </dd>
+    <dd class="invisible">How many employees are in the National Park Service?</dd>
+    <dd class="invisible">How old is the National Park System?</dd>
+    <dd class="invisible">What is the origin of the National Park Service arrowhead?</dd>
+    <dd class="invisible">How many areas are in the National Park System?</dd>
+    <dd class="invisible">What is the largest national park site? Smallest?</dd>
+    <dd class="invisible">How many people visit the national parks?</dd>
+    <dd class="invisible">What is the most-visited national park?</dd>
+    <dd class="invisible">What is the National Park Service budget?</dd>
+    <dd class="invisible">How do I obtain a park entrance pass?</dd>
+    <dd class="invisible">https://www.nps.gov/aboutus/faqs.htm</dd>
 
 </dl>
 <script src="js/jquery.js"></script>
@@ -30,9 +36,11 @@
 
     $('dd').click(function () {
          $(this).addClass('highlight');
-      $(this).next().toggleClass('invisible');
+      $(this).next().invisibleClass('invisible');
      });
-    </script>
+</script>
+
+
 </body>
 </html>
 
