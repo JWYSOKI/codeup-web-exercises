@@ -10,9 +10,6 @@
     </style>
 
 </head>
-
-
-
 <body>
 <dl>
     <dt>10 FAQs about National Parks</dt>
@@ -26,13 +23,16 @@
     <dd class="invisible">What is the most-visited national park?</dd>
     <dd class="invisible">What is the National Park Service budget?</dd>
     <dd class="invisible">How do I obtain a park entrance pass?</dd>
-    <dd class="invisible">https://www.nps.gov/aboutus/faqs.htm</dd>
+
+    <dd>https://www.nps.gov/aboutus/faqs.htm</dd>
 
 </dl>
 <script src="js/jquery.js"></script>
 
 <script>
     "use strict";
+    $.ajax("https://swapi.co/api/people").done(function(data,status){console.log(data)
+    })
 
     // $('dd').click(function () {
     //      $(this).addClass('highlight');
