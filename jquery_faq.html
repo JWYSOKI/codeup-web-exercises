@@ -11,6 +11,10 @@
 
 </head>
 <body>
+
+<h3>FAQs</h3>
+
+
 <dl>
     <dt>10 FAQs about National Parks</dt>
     <dd class="invisible">Who is the director of the National Park Service? </dd>
@@ -23,10 +27,33 @@
     <dd class="invisible">What is the most-visited national park?</dd>
     <dd class="invisible">What is the National Park Service budget?</dd>
     <dd class="invisible">How do I obtain a park entrance pass?</dd>
-
     <dd>https://www.nps.gov/aboutus/faqs.htm</dd>
-
 </dl>
+
+<h3>Redwood National Park</h3>
+<ul>
+    <li>Linux</li>
+    <li>Apache</li>
+    <li>MySQL</li>
+    <li>PHP</li>
+</ul>
+
+<h3>Sequoia National Park</h3>
+<ul>
+    <li>Linux</li>
+    <li>Apache</li>
+    <li>MySQL</li>
+    <li>PHP</li>
+</ul>
+
+<h3>Joshua Tree National Park</h3>
+<ul>
+    <li>Linux</li>
+    <li>Apache</li>
+    <li>MySQL</li>
+    <li>PHP</li>
+</ul>
+
 <script src="js/jquery.js"></script>
 
 <script>
@@ -38,13 +65,20 @@
     //      $(this).addClass('highlight');
     //   $(this).next().invisibleClass('invisible');
     //  });
-    // This adds an a tag to the page once it loads that says "toggle invisible"
+//*** Adds an a tag to the page once it loads that says "toggle invisible"
     $('body').ready().append('<a>Toggle Invisble</a>')
-    // This immediately adds a click listener to that link
+//*** This immediately adds a click listener to that link
         .click(function(){$('dd').
-        // When the link is clicked the invisible class is toggled on and off of the dd links
+//*** When the link is clicked the invisible class is toggled on and off of the dd links
         toggleClass('invisible');
-        })
+        });
+
+//*** Highlight every other li element using the .each() method:
+    $('li').each(function(index) {
+        if (index % 2 !== 0) {
+            $(this).css('background-color', '#FF0');
+        }
+    });
 </script>
 
 
