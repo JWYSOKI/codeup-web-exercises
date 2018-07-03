@@ -38,9 +38,13 @@
     //      $(this).addClass('highlight');
     //   $(this).next().invisibleClass('invisible');
     //  });
-
-    $('body').ready().append('<a>Toggle Invisble</a>').click(function(){$('dd').toggleClass('invisible');
-    })
+    // This adds an a tag to the page once it loads that says "toggle invisible"
+    $('body').ready().append('<a>Toggle Invisble</a>')
+    // This immediately adds a click listener to that link
+        .click(function(){$('dd').
+        // When the link is clicked the invisible class is toggled on and off of the dd links
+        toggleClass('invisible');
+        })
 </script>
 
 
