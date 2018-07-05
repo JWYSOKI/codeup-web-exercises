@@ -18,6 +18,10 @@
 
 <body>
 
+//This is a super cool Star Wars API from Chris:
+        // $.ajax("https://swapi.co/api/people").done(function(data,status){console.log(data)
+
+
 <h3>FAQs</h3>
 
 <div class="container my-5">
@@ -76,7 +80,7 @@
                 <li>PHP</li>
             </ul>
 
-            <button type="button" class="btn btn-success btn-lg">Success!</button>
+            <button id="highlighter_button" type="button" class="btn btn-success btn-lg">Success!</button>
 
         </div>
     </div>
@@ -94,37 +98,15 @@
             $("#toggle-button").click(function(){
                 $('dd').toggleClass('invisible');
             });
+// *** Targets button id when clicked to run the annonymous function
+        $("#highlighter_button").click(function(){
+// *** THis applies the following to each UL on the page:
+            $("ul").each(function(){
+// *** This targets the last child of each UL (the 'li's) via method changing
+                $(this).children().last().css("background", "#FF0");
+            })
+        })
 
-
-
-
-
-
-
-
-
-
-
-        //
-        // // *** Adds an a tag to the page once it loads that says "toggle invisible"
-        // $('body').ready().append('<a>Toggle Invisble</a>')
-        // // *** This immediately adds a click listener to that link
-        // .click(function(){$('dd')
-        // toggleClass('invisible');//*** When the link is clicked the invisible class is toggled on and off of the dd links
-        //
-        // });
-        //
-        // // *** Highlight every other li element using the .each() method:
-        // $('li').each(function(index) {
-        // if (index % 4 !== 0) {
-        // $(this).css('background-color', '#FF0');
-        // }
-        // });
-
-
-
-
-        // $.ajax("https://swapi.co/api/people").done(function(data,status){console.log(data)
 
         });
     })();
