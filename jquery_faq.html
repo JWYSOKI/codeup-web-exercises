@@ -18,8 +18,8 @@
 
 <body>
 
-//This is a super cool Star Wars API from Chris:
-        // $.ajax("https://swapi.co/api/people").done(function(data,status){console.log(data)
+<!--This is a super cool Star Wars API from Chris:-->
+         <!--$.ajax("https://swapi.co/api/people").done(function(data,status){console.log(data)-->
 
 
 <h3>FAQs</h3>
@@ -30,6 +30,13 @@
     </div>
     <div class="row">
         <div class="col-md-6">
+
+<div>
+    <h1>Would you like to sign up for our newsletter?
+        <span>X</span>
+    </h1>
+
+</div>
             <h1>10 FAQs about National Parks</h1>
             <dl>
                 <dt>Who is the director of the National Park Service? </dt>
@@ -122,7 +129,19 @@ $("li").click(function(){
     $(this).parent().children().first().css("color", "blue");
 })
 
+$("span").click(function(){
+    $(this).parent().hide();
+})
 
+$("li").hide()
+
+$("h3").click(function(){
+    $(this).next().children().slideToggle()
+})
+
+
+
+// The uls next to each h3 that contain facts about each park should start out hidden, and when the corresponding h3 is clicked, the display of the ul should be toggled with a sliding effect.
 
 </script>
 
