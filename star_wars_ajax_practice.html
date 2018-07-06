@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Star Wars AJAX practice</title>
+</head>
+<body>
+
+
+<script src="js/jquery.js"></script>
+
+
+
+
+<script>
+// <!--this is the API weather key-->
+//
+// <!--e4e1296cdf5b01fb8814d4c2729dfa05-->
+
+
+$.ajax("api.openweathermap.org/data/2.5/forecast?q=Austin,us&mode=xml").done(function(response){
+    console.log(response)
+})
+
+
+</script>
+
+
+
+</body>
+</html>

@@ -18,8 +18,7 @@
 
 <body>
 
-<!--This is a super cool Star Wars API from Chris:-->
-         <!--$.ajax("https://swapi.co/api/people").done(function(data,status){console.log(data)-->
+
 
 
 <h3>FAQs</h3>
@@ -136,16 +135,21 @@ $("span").click(function(){
 $("li").hide()
 
 $("h3").click(function(){
-    $(this).next().children().slideToggle()
+    $(this).next().children().toggle()
 })
 
+// <!--This is a super cool Star Wars API from Chris:-->
+$.ajax('https://swapi.co/api/people/').done(function(response){
+    var choice = Math.floor(Math.random() * response.results.length)
+    console.log(response.results[choice].name)
+})
 
-
-// The uls next to each h3 that contain facts about each park should start out hidden, and when the corresponding h3 is clicked, the display of the ul should be toggled with a sliding effect.
+//STANDARD AJAX SYNTAX
+$.ajax('url').done(function(response){
+    console.log(response)
+})
 
 </script>
-
-
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
