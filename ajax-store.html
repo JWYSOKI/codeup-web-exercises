@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Online Store</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
 </head>
 <body>
 
@@ -19,7 +20,13 @@
     <tbody id="insertProducts"></tbody>
 </table>
 
+<button id="refresh-btn">Refresh!</button>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
 
 <script>
     (function() {
@@ -33,8 +40,9 @@
             console.log(status);
         });
 
+
 // This function takes the data from inventory.json and appends it to the products table
-     function appendData(data){
+     function appendData(data) {
          var inventory = " "
 // For each item in this data array, I created a line of html called "inventory" and then append that html into the "products" table
          data.forEach(function(item){
@@ -49,8 +57,31 @@
 //This appends the inventory html that was created to the #insertProducts table body
            $("#insertProducts").append(inventory)
         }
+
+
     })();
 
+    function newData(){
+        var inventory = " "
+        var ajaxRequest = $.ajax("./data/inventory.json")
+
+//This resets the table back to the default of empty by calling its id and using the jQuery selector of .html set to an empty string. This solves the problem of the refresh button continuing to append every time it was clicked.
+        $('#insertProducts').html("")
+
+        ajaxRequest.done(function (data){
+            data.forEach(function(item){
+                inventory += "<tr>"
+                inventory += "<td>" + item.title + "</td>"
+                inventory += "<td>" + item.quantity + "</td>"
+                inventory += "<td>" + item.categories + "</td>"
+                inventory += "<td>" + item.price + "</td>"
+                inventory += "</tr>"
+            })
+            $("#insertProducts").append(inventory)
+
+        })
+    }
+        $("#refresh-btn").click(newData)
 
 </script>
 
