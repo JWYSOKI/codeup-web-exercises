@@ -24,31 +24,31 @@
 <script>
     (function() {
         "use strict";
-        // TODO: Create an ajax GET request for /data/inventory.json
+// This is an ajax GET request for /data/inventory.json
         $.ajax('./data/inventory.json').done(function (data) {
-            appendToTable(data);
+// which returns an array of objects that I named "data"
+           appendData(data)
+// this console logs the "error" status if something goes wrong
         }).fail(function (JSONObject, status) {
             console.log(status);
         });
 
-        // TODO: Take the data from inventory.json and append it to the products table
-        function appendToTable(tools) {
-            var inventory = "";
-            tools.forEach(function (tool) {
-                inventory += "<tr>"
-                inventory += "<td>" + tool.title + "</td>";
-                inventory += "<td>" + tool.quantity + "</td>";
-                inventory += "<td>" + tool.price + "</td>";
-                inventory += "<td>" + tool.categories + "</td>";
-                inventory += "</tr>";
-            });
-            $('#insertProducts').html(inventory);
+// This function takes the data from inventory.json and appends it to the products table
+     function appendData(data){
+         var inventory = " "
+// For each item in this data array, I created a line of html called "inventory" and then append that html into the "products" table
+         data.forEach(function(item){
+             inventory += "<tr>"
+             inventory += "<td>" + item.title + "</td>"
+             inventory += "<td>" + item.quantity + "</td>"
+             inventory += "<td>" + item.categories + "</td>"
+             inventory += "<td>" + item.price + "</td>"
+             inventory += "</tr>"
+         })
+
+//This appends the inventory html that was created to the #insertProducts table body
+           $("#insertProducts").append(inventory)
         }
-
-        //       HINT: Your data should come back as a JSON object; use console.log() to inspect
-        //             its contents and fields
-        //       HINT: You will want to target #insertProducts for your new HTML elements
-
     })();
 
 
