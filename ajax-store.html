@@ -59,6 +59,7 @@
 // This function takes the data from inventory.json and appends it to the products table
      function appendData(data) {
          var inventory = " "
+         var ajaxRequest = $.ajax("./data/inventory.json")
 // For each item in this data array, I created a line of html called "inventory" and then append that html into the "products" table
          data.forEach(function(item){
              inventory += "<tr>"
@@ -85,10 +86,11 @@
 
         ajaxRequest.done(function (data){
             data.forEach(function(item){
+                console.log(item.categories)
                 inventory += "<tr>"
                 inventory += "<td>" + item.title + "</td>"
                 inventory += "<td>" + item.quantity + "</td>"
-                inventory += "<td>" + item.categories + "</td>"
+                inventory += "<td>" + item.categories.join('<br>') + "</td>"
                 inventory += "<td>" + item.price + "</td>"
                 inventory += "</tr>"
             })
