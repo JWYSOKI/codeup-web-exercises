@@ -99,9 +99,45 @@ $(document).ready(function() {
 });
 
 
-
+$(document).ready(function() {
+    "use strict";
+    var location = 4726206;
+    var jqXhr = $.get('http://api.openweathermap.org/data/2.5/forecast', {
+        APPID: '7f8e3aa0aad113510e0c1eaafd1c17b8',
+        id: location,
+        units: 'imperial'
+    });
+    jqXhr.done(function(data) {
+        return(data.list[8].main.humidity);
+    });
+});
 
 
 
 // console.log all type of information you will ultimately display for all days in the 3-day forecast divs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
