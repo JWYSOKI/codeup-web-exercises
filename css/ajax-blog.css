@@ -2,10 +2,16 @@ body {
     background: url("http://kb4images.com/images/photo-background-images/37290378-photo-background-images.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 #posts{
     font-family: Apple Chancery, cursive;
+}
+
+.jumbotron {
+    background: rgba(255, 255, 255, .2);
+    border: 3px groove white;
 }
 
 
