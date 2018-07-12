@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Weather Map Exercise</title>
+    <title>Jillian's Weather Map Exercise</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
 
@@ -22,6 +22,42 @@
     <h1>Weather Map Project</h1>
 
 </main>
+
+
+
+    <main class="container">
+        <div class="row">
+            <h1 id="app-title" class="title col-xs-12">Weather in: San Antonio</h1>
+        </div>
+
+        <div class="row">
+            <div class="remove-padding col-xs-8 text-left">
+                <input type="text" id="search-bar" placeholder="Search a City" value="San Antonio" size="20">
+                <button class="search-btn" id="search-btn">Search!</button>
+            </div>
+            <div class="remove-padding col-xs-4 text-right">
+
+                <select name="forecast-length" id="forecast-length">
+                    <option value="2" id="forecast-2" selected>2 Day Forecast</option>
+                    <option value="4" id="forecast-4">4 Day Forecast</option>
+                    <option value="5" id="forecast-5">5 Day Forecast</option>
+                </select>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="weather col-xs-12"></div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-xs-12" id="map-display"></div>
+        </div>
+
+    </main>
+</div>
+
 
 
 <!--This is the google API script tag-->
